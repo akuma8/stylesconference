@@ -1,0 +1,18 @@
+Quelques notes concernant les propriétés css:
+1- Tout élément html est représenté sous forme de box = plusieurs rectangles avec :
+    a- le contenu au centre
+    b- le padding (toujours transparent), permet d'aérer le contenu
+    c- le border (qu'on peut modifier avec 3 paramères WIDTH, STYLE, COLOR)
+    d- margin (toujours transparent), permet d'espacer le contenu
+ Ce modèle de box peut être changé avec la propriété "box-sizing" qui permet de choisir où est confondu le contenu.
+ Exemple si "box-sizing: border-box" alors le contenu sera confondu avec le bord de l'élément, ce qui veut dire que modifier le padding ne changera rien
+
+2- Tout élément a une proriété "display" par défaut, qui est soit "inline" ou "block". On peut bien sûr overrider cette valeur (cas du CSS Reset)
+
+3- La propriété "float" permet de positionner un élément, si l'élément est de type "inline" alors il est modifié en "block" pour pouvoir effectuer le positionnement.
+Par défaut, "float" modifie la taille de l'élément pour le rapprocher à son contenu, il faut donc mettre un "width" pour contraindre la largeur qu'on souhaite.
+"float" est relatif au parent, s'il n'y a pas de parent alors c'est la page tout entière. Pour positionner 3 éléments dans une même ligne, il faut les floater à gauche tous les 3.
+Pour appliquer les éléments comme il se doit après un "float" il faut souvent appliquer un "clear"(prend pour valeur "left", "right" ou "both")
+
+4- En mettant la propriété "display" à "inline-block", il est également possible de positionner les éléments car les éléments de type "inline-block" sont affichés les uns à la suite des autres
+C'est plus simple de procéder ainsi car pas besoin d'effectuer un clear.
